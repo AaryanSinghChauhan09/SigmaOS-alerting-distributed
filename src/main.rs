@@ -1,10 +1,8 @@
-//! SigmaOS-alerting-distributed - SigmaOS Component
+//! alerting-distributed component binary.
+//!
+//! Component logic lives in the library crate (`src/lib.rs`); this binary is
+//! a thin entry point kept minimal so the crate builds and tests run.
 
-use anyhow::Result;
-
-fn main() -> Result<()> {
-    env_logger::init();
-    log::info!("Starting SigmaOS-alerting-distributed");
-    println!("SigmaOS SigmaOS-alerting-distributed v0.1.0");
-    Ok(())
+fn main() {
+    println!("SigmaOS {} v{}", env!("CARGO_PKG_NAME"), env!("CARGO_PKG_VERSION"));
 }
